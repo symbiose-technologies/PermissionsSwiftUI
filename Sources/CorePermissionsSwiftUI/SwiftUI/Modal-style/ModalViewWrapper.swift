@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIIntrospect
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 @usableFromInline struct ModalViewWrapper<Body: View>: View, CustomizableView {
     //store contains static configurations and customizations
     @usableFromInline var store: PermissionStore

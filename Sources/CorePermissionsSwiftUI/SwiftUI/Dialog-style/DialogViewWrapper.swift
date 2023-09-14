@@ -8,7 +8,7 @@
 import SwiftUI
 
 //The root level view for alert-style
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, *)
 @available(tvOS, unavailable, message: "Dialog style permission view is unavailable for tvOS, use modal style instead.")
 @usableFromInline struct DialogViewWrapper<Body: View>: View, CustomizableView {
     @usableFromInline typealias ViewType = Body
@@ -50,7 +50,8 @@ import SwiftUI
             if shouldShowPermission {
                 Group{
                     #if !os(tvOS)
-                    Blur(style: .systemUltraThinMaterialDark)
+                    Blur()
+//                    Blur(style: .systemUltraThinMaterialDark)
                         .transition(AnyTransition.opacity.animation(Animation.default.speed(1.6)))
                     #else
                     Blur(style: .extraDark)

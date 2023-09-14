@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0,  tvOS 13.0, *)
 struct PermissionSection: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var showing:Bool

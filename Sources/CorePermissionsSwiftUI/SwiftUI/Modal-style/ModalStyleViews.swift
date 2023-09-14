@@ -8,7 +8,7 @@
 import SwiftUI
 
 //MARK: - Showing Modal Style Permissions
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public extension View {
     /**
      Displays a PermissionsSwiftUI modal view that displays and handles permissions.
@@ -346,7 +346,7 @@ public extension View {
 }
 
 //MARK: - Deprecated
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 public extension View {
     /**
      Displays a PermissionsSwiftUI modal view that displays and handles permissions.

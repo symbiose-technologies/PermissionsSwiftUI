@@ -7,7 +7,7 @@
 
 import Foundation
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 struct FilterPermissions {
     // Based on struct boolean property, dependent on memory
     static func filterForUnauthorized(with permissions: [PermissionManager],

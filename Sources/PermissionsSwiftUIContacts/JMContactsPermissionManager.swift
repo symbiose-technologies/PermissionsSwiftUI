@@ -11,13 +11,13 @@ import Contacts
 import AddressBook
 import CorePermissionsSwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public extension PermissionManager {
     ///A permission that allows developers to read & write to device contacts
     static let contacts = JMContactsPermissionManager()
 }
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public final class JMContactsPermissionManager: PermissionManager {
     
     typealias authorizationStatus = CNAuthorizationStatus

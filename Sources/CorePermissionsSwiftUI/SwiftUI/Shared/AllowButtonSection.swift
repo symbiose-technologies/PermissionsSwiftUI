@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 struct AllowButtonSection: View {
     var action: () -> Void
     var useAltText: Bool

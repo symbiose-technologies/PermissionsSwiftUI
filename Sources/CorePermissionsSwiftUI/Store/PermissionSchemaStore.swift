@@ -11,7 +11,7 @@ import Combine
  The schema storage class that coordinates PermissionsSwiftUI's internal functions
  */
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public class PermissionSchemaStore: ObservableObject {
 
     //MARK: Filtered permission arrays
