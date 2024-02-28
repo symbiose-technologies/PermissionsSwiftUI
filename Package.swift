@@ -22,7 +22,7 @@ let permissionsTargets: [Target] = [
     ),
     .target(
         name: "PermissionsSwiftUICalendar",
-        dependencies: ["SwiftUIIntrospect", "CorePermissionsSwiftUI"],
+        dependencies: ["SwiftUIIntrospect", "CorePermissionsSwiftUI", "PermissionsSwiftUIEvent"],
         exclude: ["../../Tests/PermissionsSwiftUITests/__Snapshots__"]
     ),
     .target(
@@ -92,7 +92,7 @@ let permissionsTargets: [Target] = [
     ),
     .target(
         name: "PermissionsSwiftUIReminder",
-        dependencies: ["SwiftUIIntrospect", "CorePermissionsSwiftUI"],
+        dependencies: ["SwiftUIIntrospect", "CorePermissionsSwiftUI", "PermissionsSwiftUIEvent"],
         exclude: ["../../Tests/PermissionsSwiftUITests/__Snapshots__"]
     ),
     .target(
@@ -105,9 +105,21 @@ let permissionsTargets: [Target] = [
         dependencies: ["SwiftUIIntrospect", .target(name: "CorePermissionsSwiftUI")],
         exclude: ["../../Tests/PermissionsSwiftUITests/__Snapshots__"]
     ),
-    .target(name: "PermissionsSwiftUISiri",
-            dependencies: ["SwiftUIIntrospect", "CorePermissionsSwiftUI"],
-            exclude: ["../../Tests/PermissionsSwiftUITests/__Snapshots__"])]
+    .target(
+        name: "PermissionsSwiftUISiri",
+        dependencies: ["SwiftUIIntrospect", "CorePermissionsSwiftUI"],
+        exclude: ["../../Tests/PermissionsSwiftUITests/__Snapshots__"]
+    ),
+    .target(
+        name: "PermissionsSwiftUIBiometrics",
+        dependencies: ["Introspect", .target(name: "CorePermissionsSwiftUI")],
+        exclude: ["../../Tsts/PermissionsSwiftUITests/__Snapshots__"]
+    ),
+    .target(
+        name: "PermissionsSwiftUIEvent",
+        dependencies: ["Introspect", .target(name: "CorePermissionsSwiftUI")],
+        exclude: ["../../Tsts/PermissionsSwiftUITests/__Snapshots__"]
+    )]
 
 let package = Package(
     name: "PermissionsSwiftUI",

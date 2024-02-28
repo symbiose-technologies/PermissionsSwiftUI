@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import PermissionsSwiftUIEvent
+
 #if !os(tvOS)
 import EventKit
 import CorePermissionsSwiftUI
