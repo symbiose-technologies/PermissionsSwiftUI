@@ -112,12 +112,12 @@ let permissionsTargets: [Target] = [
     ),
     .target(
         name: "PermissionsSwiftUIBiometrics",
-        dependencies: ["Introspect", .target(name: "CorePermissionsSwiftUI")],
+        dependencies: ["SwiftUIIntrospect", .target(name: "CorePermissionsSwiftUI")],
         exclude: ["../../Tsts/PermissionsSwiftUITests/__Snapshots__"]
     ),
     .target(
         name: "PermissionsSwiftUIEvent",
-        dependencies: ["Introspect", .target(name: "CorePermissionsSwiftUI")],
+        dependencies: ["SwiftUIIntrospect", .target(name: "CorePermissionsSwiftUI")],
         exclude: ["../../Tsts/PermissionsSwiftUITests/__Snapshots__"]
     )]
 
