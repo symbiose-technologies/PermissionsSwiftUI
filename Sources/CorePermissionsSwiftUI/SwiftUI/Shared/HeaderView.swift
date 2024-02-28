@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 struct HeaderView: View {
     @EnvironmentObject var store: PermissionStore
     @EnvironmentObject var schemaStore: PermissionSchemaStore

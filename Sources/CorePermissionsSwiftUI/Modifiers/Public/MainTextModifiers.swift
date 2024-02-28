@@ -8,7 +8,7 @@
 import SwiftUI
 
 // MARK: Configure Header and Description Texts
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 public extension CustomizableView {
     /**
      Displays a customized main header text

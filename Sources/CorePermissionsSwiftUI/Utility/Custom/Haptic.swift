@@ -4,7 +4,7 @@
 //
 //  Created by Jevon Mao on 3/4/21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -20,3 +20,4 @@ class HapticsManager {
         notificationFeedbackGenerator = nil
     }
 }
+#endif

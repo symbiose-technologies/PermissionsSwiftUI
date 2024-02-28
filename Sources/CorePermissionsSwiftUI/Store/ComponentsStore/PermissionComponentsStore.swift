@@ -11,7 +11,7 @@ import SwiftUI
 /**
  The data storage class that contains configurable permission components
  */
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public struct PermissionComponentsStore {
     //MARK: Creating a new permission components store
     /**
@@ -129,7 +129,7 @@ public struct PermissionComponentsStore {
 
 }
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 extension PermissionComponentsStore {
     @usableFromInline
     @discardableResult

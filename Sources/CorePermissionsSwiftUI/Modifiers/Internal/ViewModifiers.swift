@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 extension View {
     func buttonStatusColor(for allowButtonStatus: AllowButtonStatus) -> some View {
         self.modifier(ButtonStatusColor(allowButtonStatus: allowButtonStatus))
@@ -34,7 +34,7 @@ extension View {
 }
 
 //Custom view modifier for the button component
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 struct ButtonStatusColor: ViewModifier {
     var allowButtonStatus: AllowButtonStatus
     @EnvironmentObject var store: PermissionStore
@@ -60,7 +60,7 @@ struct ButtonStatusColor: ViewModifier {
     }
 }
 //Custom modifier that nests within ButtonStatusColor to further extract code
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 struct AllowButton: ViewModifier {
     var foregroundColor: Color
     var backgroundColor: Color

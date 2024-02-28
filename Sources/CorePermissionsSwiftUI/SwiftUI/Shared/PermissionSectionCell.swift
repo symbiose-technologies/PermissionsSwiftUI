@@ -13,7 +13,7 @@ enum AllowButtonStatus: CaseIterable {
     case denied
 }
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0,  tvOS 13.0, *)
 struct PermissionSectionCell: View {
     @State var permissionManager: PermissionManager
     @State var allowButtonStatus: AllowButtonStatus = .idle

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0,  macOS 12.0, tvOS 13.0, *)
 struct ExitButtonSection: View {
     //Action is closing the alert or modal on tap
     var action: () -> Void
@@ -17,7 +17,7 @@ struct ExitButtonSection: View {
     @EnvironmentObject var schemaStore: PermissionSchemaStore
     var body: some View {
         Button(action: {
-            #if !os(tvOS)
+            #if !os(tvOS) && !os(macOS)
                 let haptics = HapticsManager()
                 if schemaStore.shouldStayInPresentation {
                     haptics.notificationImpact(.error)

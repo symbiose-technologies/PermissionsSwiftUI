@@ -6,17 +6,22 @@
 //
 
 import Foundation
-import UIKit
 import UserNotifications
 import CorePermissionsSwiftUI
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
-@available(iOS 13.0, tvOS 13.0, *)
+
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public extension PermissionManager {
     ///The `notification` permission allows the iOS system to receive notification from app
     static let notification = JMNotificationPermissionManager()
 }
 
-@available(iOS 13.0, tvOS 13.0, *)
+@available(iOS 13.0, macOS 12.0, tvOS 13.0, *)
 public final class JMNotificationPermissionManager: PermissionManager {
     
     
@@ -60,9 +65,11 @@ public final class JMNotificationPermissionManager: PermissionManager {
     override public func requestPermission(completion: @escaping (Bool, Error?) -> Void) {
         notificationManager.requestAuthorization(options: [.badge,.alert,.sound]){ granted, error in
             completion(granted, error)
-            
         }
-       
+        #if os(iOS)
         UIApplication.shared.registerForRemoteNotifications()
+        #elseif os(macOS)
+        NSApplication.shared.registerForRemoteNotifications()
+        #endif
     }
 }
